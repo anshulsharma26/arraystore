@@ -1,0 +1,110 @@
+.variant-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.variant-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.variant-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.variant-selected {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.variant-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.variant-btn {
+  position: relative;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-glass);
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+
+.variant-btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary-light);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.variant-btn.active {
+  border-color: var(--color-primary);
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--color-primary-light);
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.2);
+}
+
+.variant-btn.unavailable {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.variant-btn.out-of-stock {
+  opacity: 0.5;
+}
+
+.oos-line {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: 110%;
+  height: 1px;
+  background: var(--color-danger);
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+.variant-info {
+  padding: 1rem;
+  background: var(--color-bg-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.variant-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.variant-info-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.variant-info-price {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.variant-info-sku {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  font-family: monospace;
+}
