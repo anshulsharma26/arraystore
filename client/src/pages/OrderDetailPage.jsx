@@ -41,7 +41,7 @@ const OrderDetailPage = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.5rem' }}>
             {order.items.map((item, idx) => (
               <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '0.75rem', background: 'var(--color-bg-glass)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
-                <img src={item.image || 'https://via.placeholder.com/64'} alt={item.name} className="detail-item-image" />
+                <img src={item.image || 'https://via.placeholder.com/64'} alt={item.name} style={{ width: '64px', height: '64px', objectFit: 'cover', borderRadius: 'var(--radius-sm)' }} />
                 <div style={{ flex: 1 }}>
                   <p style={{ fontWeight: 600, fontSize: '0.92rem' }}>{item.name}</p>
                   <p className="text-muted" style={{ fontSize: '0.8rem' }}>{item.variant?.color} {item.variant?.size && `/ ${item.variant.size}`} × {item.quantity}</p>
