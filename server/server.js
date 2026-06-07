@@ -52,12 +52,13 @@ app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/payments', paymentRoutes);
 
-
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to the ArrayStore API!', status: 'running' });
+});
 app.use(notFound);
 app.use(errorHandler);
 
