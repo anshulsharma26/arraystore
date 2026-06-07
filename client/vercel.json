@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "https://arraystore-tzoq.vercel.app/api/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }
